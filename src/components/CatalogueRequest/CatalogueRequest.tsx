@@ -29,7 +29,7 @@ const CatalogueRequest = () => {
     <div className={styles.container}>
       <div className={styles.imageSection}>
         <Image
-          src="/path/to/catalogue-image.jpg"
+          src="/img/catalogueRequest/inrealartCatalogue.jpg"
           alt="Catalogue InRealArt"
           width={400}
           height={400}

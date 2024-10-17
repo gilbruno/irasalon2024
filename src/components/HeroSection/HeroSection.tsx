@@ -9,6 +9,8 @@ export default function ImageHeader() {
         alt="Salon d'Automne 2024"
         layout="fill"
         objectFit="cover"
+        quality={100}
+        priority
         className={styles.backgroundImage}
       />
       <div className={styles.content}>
@@ -18,8 +20,8 @@ export default function ImageHeader() {
             <Image
               src="/img/heroSection/salon_automne.jpg"
               alt="Ticket Salon d'Automne 2024"
-              width={200}
-              height={100}
+              width={400}
+              height={200}
             />
           </div>
           <h1 className={styles.title}>Salon d'Automne 2024 Un programme exclusif avec l'artiste Catherine Sénéchal et InReal Art</h1>
