@@ -9,7 +9,7 @@ const Testimonials = () => {
       <div className={styles.testimonialsList}>
         <div className={styles.testimonialCard}>
           <Image
-            src="/path/to/francois-boucheix.jpg"
+            src="/img/testimonials/fboucheix.jpg"
             alt="François Boucheix"
             width={150}
             height={150}
@@ -27,7 +27,7 @@ const Testimonials = () => {
         </div>
         <div className={styles.testimonialCard}>
           <Image
-            src="/path/to/leloluce.jpg"
+            src="/img/testimonials/leloluce.jpg"
             alt="Leloluce"
             width={150}
             height={150}
