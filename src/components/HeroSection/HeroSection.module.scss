@@ -1,0 +1,83 @@
+.header {
+  position: relative;
+  height: 400px;
+  color: white;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.backgroundImage {
+  border-radius: 15px;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+}
+
+.emptyRow, .middleRow, .description {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.middleRow {
+  justify-content: space-between;
+  gap: 2rem; // Ajoute un espace entre les éléments
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center; // Aligne l'image à droite de son conteneur
+  align-items: center;
+
+  img {
+    border-radius: 15px; // Arrondit les coins de l'image
+    overflow: hidden; // Assure que le contenu de l'image respecte les coins arrondis
+  }
+}
+
+.title {
+  flex: 1;
+  font-size: 1.5rem;
+  text-align: center; // Centre le texte horizontalement
+  display: flex; // Utilise flexbox pour le centrage vertical
+  align-items: center; // Centre verticalement le contenu
+  justify-content: center; 
+  color: #ffffff;
+  text-align: center;
+  font-family: "Unbounded-Bold", sans-serif;
+  font-size: 2.25rem;
+  letter-spacing: -0.03125rem;
+  font-weight: 700;
+  position: relative;
+  height: 14.625rem;
+}
+
+.description {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 2.25rem;
+  letter-spacing: -0.03125rem;
+  font-weight: 700;
+  position: relative;
+  height: 7.6875rem;
+}
+
+// ... le reste du code reste inchangé ...
