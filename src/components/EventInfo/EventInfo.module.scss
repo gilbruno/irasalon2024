@@ -7,10 +7,21 @@
   width: 100%; 
 }
 
-.eventInfoItem {
-  margin-bottom: 15px;
-  max-width: 60%; // Réduit la largeur à 80% du conteneur parent
-  width: 100%; 
+.eventInfoItem1 {
+  color: #0b142e;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+.eventInfoItem2 {
+  color: #0b142e;
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  letter-spacing: -0.5px;
+  font-weight: 400;
 }
 
 .title {
