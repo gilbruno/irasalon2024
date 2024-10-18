@@ -1,37 +1,80 @@
+.container,
+.container * {
+  box-sizing: border-box;
+}
 .container {
-    background-color: #f0f4ff;
-    padding: 40px 20px;
-    border-radius: 15px;
-    margin: 20px 0;
-  }
-  
-  .title {
-    font-size: 32px;
-    color: #4a5d94;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .partnersContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
-  }
-  
-  .partner {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.wrapperText {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 35.5625rem;
+  height: 3rem;
+  position: relative;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.title {
+  color: var(--bleu-bleu-sombre-300, #6979a7);
+  text-align: left;
+  font-family: "Unbounded-Regular", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: -0.03125rem;
+  font-weight: 400;
+  position: relative;
+  width: 34.9375rem;
+}
+
+.partnersLogo {
+  display: flex;
+  flex-direction: row;
+  gap: 11.875rem;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.partner1 {
+  flex-shrink: 0;
+  width: 26.5rem;
+  height: 5.75rem;
+  position: relative;
+  object-fit: cover;
+}
+.partner2 {
+  flex-shrink: 0;
+  width: 13.25rem;
+  height: 10.125rem;
+  position: relative;
+  object-fit: cover;
+}
+
+
   @media (max-width: 768px) {
-    .partnersContainer {
+    .partnersLogo {
       flex-direction: column;
     }
   }
