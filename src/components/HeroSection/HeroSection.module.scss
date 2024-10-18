@@ -23,16 +23,15 @@
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
 }
 
-.emptyRow, .middleRow, .description {
+.middleRow, .description {
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.middleRow {
-  justify-content: space-between;
-  gap: 2rem; // Ajoute un espace entre les éléments
-}
+
 
 .imageContainer {
   flex: 1;
@@ -81,4 +80,24 @@
   height: 7.6875rem;
 }
 
-// ... le reste du code reste inchangé ...
+@media (max-width: 1000px) {
+  .title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .middleRow {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+  }
+}

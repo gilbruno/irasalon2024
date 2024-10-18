@@ -14,7 +14,6 @@ export default function ImageHeader() {
         className={styles.backgroundImage}
       />
       <div className={styles.content}>
-        <div className={styles.emptyRow}></div>
         <div className={styles.middleRow}>
           <div className={styles.imageContainer}>
             <Image
@@ -24,7 +23,9 @@ export default function ImageHeader() {
               height={200}
             />
           </div>
-          <h1 className={styles.title}>Salon d'Automne 2024 Un programme exclusif avec l'artiste Catherine Sénéchal et InReal Art</h1>
+          <div className={styles.title}>
+            Télécharger notre catalogue Salon d’Automne 2024 Un programme exclusif avec
+            l’artiste Catherine Sénéchal et InReal Art</div>
         </div>
       </div>
     </div>
