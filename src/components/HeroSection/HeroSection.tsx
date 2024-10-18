@@ -26,7 +26,6 @@ export default function ImageHeader() {
           </div>
           <h1 className={styles.title}>Salon d'Automne 2024 Un programme exclusif avec l'artiste Catherine Sénéchal et InReal Art</h1>
         </div>
-        <p className={styles.description}>Venez rencontrer Catherine Sénéchal et ses oeuvres sur son emplacement</p>
       </div>
     </div>
   );

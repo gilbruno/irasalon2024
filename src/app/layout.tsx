@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "@/styles/variables.css"
 import "@fontsource/unbounded";
 import '@fontsource/aclonica';
+import '@fontsource/inter';
+import '@fontsource/montserrat';
 import "./globals.css";
 
 const geistSans = localFont({

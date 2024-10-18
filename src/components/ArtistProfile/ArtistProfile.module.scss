@@ -36,16 +36,16 @@
             margin-bottom: 1rem;
           }
           color: var(--color-5, #ffffff);
-  text-align: left;
-  font-family: var(
-    --text-paragraphe-font-family,
-    "Montserrat-Regular",
-    sans-serif
-  );
-  font-size: var(--text-paragraphe-font-size, 1rem);
-  font-weight: var(--text-paragraphe-font-weight, 400);
-  position: relative;
-  align-self: stretch;
+          text-align: left;
+          font-family: var(
+            --heading-text-paragraphe-font-family,
+            "Montserrat",
+            sans-serif
+          );
+          font-size: var(--heading-text-paragraphe-font-size, 1rem);
+          font-weight: var(--heading-text-paragraphe-font-weight, 400);
+          position: relative;
+          align-self: stretch;
 
           
         }

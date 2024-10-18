@@ -9,7 +9,7 @@ const TrustedPartners = () => {
       <div className={styles.partnersContainer}>
         <div className={styles.partner}>
           <Image
-            src="/img/partners/leadouze/jpg"
+            src="/img/partners/leadouze.jpg"
             alt="Galerie A. LEADOUZE"
             width={200}
             height={100}
