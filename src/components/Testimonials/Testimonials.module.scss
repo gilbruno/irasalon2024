@@ -254,3 +254,73 @@
   font-size: var(--heading-text-paragraphe-font-size, 16px);
   font-weight: var(--heading-text-paragraphe-font-weight, 400);
 }
+
+.artistText1 {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+@media (max-width: 1000px) {
+  .title2,
+  .artist1,
+  .artist2 {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .containerTestimonial1,
+  .containerTestimonial2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .wrapperText2,
+  .wrapperText3 {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .artistText1,
+  .artistText2 {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .artistText1,
+  .artistText2 {
+    font-size: 0.8rem;
+  }
+
+  .artist1,
+  .artist2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .artistText1,
+  .artistText2 {
+    font-size: 0.7rem;
+  }
+
+  .artist1,
+  .artist2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 438px) {
+  .artistText11,
+  .artistText13,
+  .artistText14,
+  .artistText21,
+  .artistText23,
+  .artistText24 {
+    font-size: 14px; // Réduisez cette valeur selon vos besoins
+  }
+}
