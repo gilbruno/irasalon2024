@@ -1,75 +1,118 @@
 .container {
-    padding: 40px 20px;
-    border-radius: 15px;
-    margin: 20px 0;
+  padding: 40px 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.title {
+  color: var(--primaire-black, #000035);
+  text-align: left;
+  font-family: "Unbounded", sans-serif;
+  font-size: 2.5rem; // Légèrement réduit pour plus de réactivité
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+  padding-bottom: 30px;
+}
+
+.statsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.statItem {
+  flex: 1 1 calc(25% - 15px);
+  min-width: 200px; // Définit une largeur minimale
+  max-width: calc(25% - 15px);
+
+  
+  border-radius: 1.25rem;
+  border-style: solid;
+  border-color: var(--primaire-black, #000035);
+  border-width: 0.0625rem;
+  padding: 1.5rem; // Légèrement réduit
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; // Espace entre statNumber et statDescription
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%; // Permet une meilleure réactivité
+  max-width: 18.5625rem; // Limite la largeur maximale
+  position: relative;
+}
+
+.statNumber {
+  color: var(--primaire-black, #000035);
+  text-align: center;
+  font-family: "Unbounded", sans-serif;
+  font-size: 2.5rem; // Taille de police réduite
+  font-weight: 400;
+  position: relative;
+}
+
+.statDescription {
+  color: var(--primaire-black, #000035);
+  text-align: center;
+  font-family: var(--heading-text-paragraphe-font-family, "Montserrat", sans-serif);
+  font-size: 0.9rem; // Taille de police réduite
+  font-weight: var(--heading-text-paragraphe-font-weight, 400);
+  position: relative;
+  line-height: 1.4; // Améliore la lisibilité
+}
+
+@media (max-width: 1200px) {
+  .statsContainer {
+    justify-content: space-between; // Répartit l'espace entre les éléments
+  }
+
+  .statItem {
+    flex: 0 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .statItem {
+    flex-basis: 100%;
   }
   
   .title {
-    color: var(--primaire-black, #000035);
-    text-align: left;
-    font-family: "Unbounded", sans-serif;
-    font-size: 3rem;
-    font-weight: 400;
-    position: relative;
-    align-self: stretch;
-    padding-bottom: 30px;
-  }
-  
-  .statsContainer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .statItem {
-    flex-basis: calc(25% - 20px);
-    border-radius: 1.25rem;
-    border-style: solid;
-    border-color: var(--primaire-black, #000035);
-    border-width: 0.0625rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 18.5625rem;
-    position: relative;
+    font-size: 2rem;
   }
   
   .statNumber {
-    color: var(--primaire-black, #000035);
-    text-align: left;
-    font-family: "Unbounded", sans-serif;
-    font-size: 3rem;
-    font-weight: 400;
-    position: relative;
-    align-self: stretch;
+    font-size: 2rem;
   }
   
   .statDescription {
-    color: var(--primaire-black, #000035);
-    text-align: left;
-    font-family: var(
-      --heading-text-paragraphe-font-family,
-      "Montserrat",
-      sans-serif
-    );
-    font-size: var(--heading-text-paragraphe-font-size, 1rem);
-    font-weight: var(--heading-text-paragraphe-font-weight, 400);
-    position: relative;
-    align-self: stretch;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 492px) {
+  .statsContainer {
+    justify-content: center;
+  }
+
+  .statItem {
+    flex-basis: 100%;
+    max-width: 80%; // Augmente la largeur maximale
+    width: 100%; // Assure que l'élément prend toute la largeur disponible
   }
   
-  @media (max-width: 768px) {
-    .statItem {
-      flex-basis: calc(50% - 20px);
-    }
+  .statNumber {
+    font-size: 2rem; // Augmente la taille de la police pour les petits écrans
   }
   
-  @media (max-width: 480px) {
-    .statItem {
-      flex-basis: 100%;
-    }
+  .statDescription {
+    font-size: 0.8rem; // Ajuste la taille de la police pour les petits écrans
   }
+
+  .title {
+    text-align: center; // Centre le titre
+    font-size: 2rem; // Optionnel : réduit légèrement la taille du titre pour les petits écrans
+  }
+}
