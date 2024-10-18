@@ -4,6 +4,21 @@
     border-radius: 15px;
     overflow: hidden;
     margin: 20px 0;
+    background: #eaedfc;
+    border-radius: 2.5rem;
+    border-style: solid;
+    border-color: #6979a7;
+    border-width: 0.0625rem;
+    padding: 5rem 3.75rem 5rem 3.75rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5.375rem;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+
   }
   
   .imageContainer {

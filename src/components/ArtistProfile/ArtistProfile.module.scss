@@ -57,7 +57,15 @@
           align-items: center;
           gap: 20px;
     
-          .imageWrapper {
+          .artistPhoto {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 50%; // Ajustez le rayon selon vos préférences
+            overflow: hidden;
+          }
+
+          .artistArtwork {
             width: 200px;
             height: 200px;
             border-radius: 15px; // Ajustez le rayon selon vos préférences

@@ -12,10 +12,10 @@ export default function ArtistProfile() {
             <p>Les couleurs éclatantes de ses œuvres, inspirées par Braque et Picasso, sont un vrai ode à la joie contagieuse. Ses créations, alliant tradition et modernité, offrent une expérience visuelle qui éveille les sens. Choisir une œuvre de Catherine Sénéchal, c'est acquérir une pièce maîtresse d'art contemporain qui transcendera le temps et les modes. Laissez-vous guider par votre instinct et faites une entrée remarquable dans le monde du luxe artistique, où l'émotion et l'art fusionnent pour créer une expérience inoubliable.</p>
         </div>
         <div className={styles.images}>
-            <div className={styles.imageWrapper}>
+            <div className={styles.artistPhoto}>
                 <Image src="/img/artistProfile/c_senechal.jpg" alt="Catherine Sénéchal" width={200} height={200} layout="responsive" />
             </div>
-            <div className={styles.imageWrapper}>
+            <div className={styles.artistArtwork}>
                 <Image src="/img/artistProfile/c_senechal_artwork.jpg" alt="Œuvre de Catherine Sénéchal" width={200} height={200} layout="responsive" />
             </div>
         </div>
