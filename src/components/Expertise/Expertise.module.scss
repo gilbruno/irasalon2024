@@ -17,6 +17,7 @@
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
+  max-width: 100%;
 }
 .expert {
   border-radius: 2.96875rem;
@@ -24,7 +25,6 @@
   align-self: stretch;
   flex: 1;
   position: relative;
-  object-fit: cover;
 }
 .containerExpert {
   display: flex;
@@ -35,6 +35,7 @@
   flex-shrink: 0;
   width: 41.8125rem;
   position: relative;
+  max-width: 90%;
 }
 .expertTitleWords {
   display: flex;
@@ -54,19 +55,25 @@
   font-weight: 400;
   position: relative;
 }
+
 .expertWords {
   color: #000000;
   text-align: left;
   font-family: var(
     --heading-text-paragraphe-font-family,
-    "Montserrat-Regular",
+    "Montserrat",
     sans-serif
   );
   font-size: var(--heading-text-paragraphe-font-size, 1rem);
   font-weight: var(--heading-text-paragraphe-font-weight, 400);
   position: relative;
   align-self: stretch;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-width: 80%;
 }
+
 .identityExpertContainer {
   display: flex;
   flex-direction: row;
@@ -89,4 +96,43 @@
   font-weight: var(--heading-text-paragraphe-font-weight, 400);
   position: relative;
   flex: 1;
+}
+
+
+@media (max-width: 1178px) {
+  .expertWords {
+    max-width: 60%;
+  }  
+}
+
+@media (max-width: 1058px) {
+  .expertWords {
+    max-width: 50%;
+  }  
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .expert {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .containerExpert {
+    width: 100%;
+  }
+
+  .expertWords {
+    font-size: 0.9rem;
+  }
+
+  .identityExpert {
+    text-align: center;
+  }
 }

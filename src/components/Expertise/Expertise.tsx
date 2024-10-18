@@ -9,8 +9,7 @@ const Expertise = () => {
       <div className={styles.containerExpert}>
         <div className={styles.expertTitleWords}>
           <div className={styles.expertTitle}>Le mot de notre experte</div>
-          <div
-            className={styles.expertWords}>
+          <div className={styles.expertWords}>
             Chez InRealArt, chaque œuvre est soigneusement choisie pour son
             caractère unique et sa capacité à sublimer votre collection. En faisant
             confiance à notre expertise, Catherine Sénéchal a pris une décision
