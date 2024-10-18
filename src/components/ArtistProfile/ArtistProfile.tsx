@@ -4,7 +4,7 @@ import styles from './ArtistProfile.module.scss';
 export default function ArtistProfile() {
   return (
     <div className={styles.profile}>
-      <h2 className={styles.artistName}>Catherine Sénéchal</h2>
+      <div className={styles.artistName}>Catherine Sénéchal</div>
       <div className={`${styles.content} ${styles.contentBackground}`}>
         <div className={styles.text}>
             <p>Découvrez un univers raffiné à travers l'univers exclusif de Catherine Sénéchal, une artiste qui transcende les frontières de l'art contemporain. Chaque œuvre est bien plus qu'une simple création : c'est une fenêtre ouverte sur un monde où la couleur et l'émotion sont mariés à l'audace. Que vous soyez amateur éclairé ou collectionneur avisé, posséder une œuvre de Catherine, c'est entrer dans un cercle privilégié où la rareté et l'exceptionnel se rencontrent.</p>
