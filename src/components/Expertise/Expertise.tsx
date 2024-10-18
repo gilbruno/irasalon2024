@@ -16,9 +16,9 @@ const Expertise = () => {
       </div>
       <div className={styles.content}>
         <h2 className={styles.title}>Le mot de notre experte</h2>
-        <p className={styles.text}>
+        <div className={styles.textExpertise}>
           Chez InRealArt, chaque œuvre est soigneusement choisie pour son caractère unique et sa capacité à sublimer votre collection. En faisant confiance à notre expertise, Catherine Sénéchal a pris une décision inspirée, tout comme tant d'autres amateurs d'art éclairés. Investir dans l'art, c'est bien plus qu'une acquisition matérielle : c'est une expérience émotionnelle, une immersion dans des histoires captivantes et des découvertes qui vibrent en harmonie avec votre sensibilité. Ajoutez une dimension nouvelle à votre collection et faites de chaque pièce une source d'inspiration personnelle.
-        </p>
+        </div>
         <p className={styles.signature}>
           Meulemans Catherine<br />
           Head of Sales<br />

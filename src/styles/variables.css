@@ -36,6 +36,9 @@
   --heading-h4-line-height: normal;
   --heading-h4-font-weight: 400;
   --heading-h4-font-style: normal;
+  --heading-text-paragraphe-font-family: Montserrat-Regular, sans-serif;
+  --heading-text-paragraphe-font-size: 16px;
+  --heading-text-paragraphe-font-weight: 400;
   --text-link-text-font-family: Montserrat-Medium, sans-serif;
   --text-link-text-font-size: 16px;
   --text-link-text-line-height: normal;
