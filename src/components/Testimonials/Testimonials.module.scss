@@ -22,7 +22,7 @@
   height: 3rem;
   position: relative;
 }
-.title {
+.titleContainer {
   display: flex;
   flex-direction: row;
   gap: 0.625rem;
@@ -35,7 +35,7 @@
 .title {
   color: var(--bleu-bleu-sombre-300, #6979a7);
   text-align: center;
-  font-family: "Unbounded-Regular", sans-serif;
+  font-family: "Unbounded", sans-serif;
   font-size: 2.5rem;
   letter-spacing: -0.03125rem;
   font-weight: 400;
@@ -112,7 +112,7 @@
 .artist1 {
   color: var(--primaire-black, #000035);
   text-align: left;
-  font-family: "Unbounded-Regular", sans-serif;
+  font-family: "Unbounded", sans-serif;
   font-size: 2.5rem;
   letter-spacing: -0.03125rem;
   font-weight: 400;
@@ -144,7 +144,7 @@
   color: #000000;
   font-family: var(
     --heading-text-paragraphe-font-family,
-    "Montserrat-Regular",
+    "Montserrat",
     sans-serif
   );
   font-size: var(--heading-text-paragraphe-font-size, 16px);
@@ -154,7 +154,7 @@
   color: #000000;
   font-family: var(
     --heading-text-paragraphe-font-family,
-    "Montserrat-Regular",
+    "Montserrat",
     sans-serif
   );
   font-size: var(--heading-text-paragraphe-font-size, 16px);
@@ -164,7 +164,7 @@
   color: #000000;
   font-family: var(
     --heading-text-paragraphe-font-family,
-    "Montserrat-Regular",
+    "Montserrat",
     sans-serif
   );
   font-size: var(--heading-text-paragraphe-font-size, 16px);
@@ -219,7 +219,7 @@
 .artist2 {
   color: var(--primaire-black, #000035);
   text-align: left;
-  font-family: "Unbounded-Regular", sans-serif;
+  font-family: "Unbounded", sans-serif;
   font-size: 2.5rem;
   letter-spacing: -0.03125rem;
   font-weight: 400;
@@ -237,32 +237,20 @@
 }
 .artistText21 {
   color: #000000;
-  font-family: var(
-    --heading-text-paragraphe-font-family,
-    "Montserrat",
-    sans-serif
-  );
+  font-family: var(--heading-text-paragraphe-font-family, "Montserrat", sans-serif);
   font-size: var(--heading-text-paragraphe-font-size, 16px);
   font-weight: var(--heading-text-paragraphe-font-weight, 400);
   font-style: var(--heading-text-paragraphe-font-style, italic);
 }
 .artistText22 {
   color: #000000;
-  font-family: var(
-    --heading-text-paragraphe-font-family,
-    "Montserrat-Regular",
-    sans-serif
-  );
+  font-family: var(--heading-text-paragraphe-font-family, "Montserrat", sans-serif);
   font-size: var(--heading-text-paragraphe-font-size, 16px);
   font-weight: var(--heading-text-paragraphe-font-weight, 400);
 }
 .artistText23 {
   color: #000000;
-  font-family: var(
-    --heading-text-paragraphe-font-family,
-    "Montserrat-Regular",
-    sans-serif
-  );
+  font-family: var(--heading-text-paragraphe-font-family, "Montserrat", sans-serif);
   font-size: var(--heading-text-paragraphe-font-size, 16px);
   font-weight: var(--heading-text-paragraphe-font-weight, 400);
 }

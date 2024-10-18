@@ -7,7 +7,7 @@ const Testimonials = () => {
 
   <div className={styles.container}>
     <div className={styles.wrapperText}>
-      <div className={styles.title}>
+      <div className={styles.titleContainer}>
         <div className={styles.title}>Témoignages</div>
       </div>
     </div>

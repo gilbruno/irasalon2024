@@ -41,7 +41,7 @@
   .statNumber {
     color: var(--primaire-black, #000035);
     text-align: left;
-    font-family: "Unbounded-Regular", sans-serif;
+    font-family: "Unbounded", sans-serif;
     font-size: 3rem;
     font-weight: 400;
     position: relative;
@@ -53,7 +53,7 @@
     text-align: left;
     font-family: var(
       --heading-text-paragraphe-font-family,
-      "Montserrat-Regular",
+      "Montserrat",
       sans-serif
     );
     font-size: var(--heading-text-paragraphe-font-size, 1rem);

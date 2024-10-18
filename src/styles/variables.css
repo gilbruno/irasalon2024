@@ -36,7 +36,7 @@
   --heading-h4-line-height: normal;
   --heading-h4-font-weight: 400;
   --heading-h4-font-style: normal;
-  --heading-text-paragraphe-font-family: Montserrat-Regular, sans-serif;
+  --heading-text-paragraphe-font-family: Montserrat, sans-serif;
   --heading-text-paragraphe-font-size: 16px;
   --heading-text-paragraphe-line-height: normal;
   --heading-text-paragraphe-font-weight: 400;
@@ -51,12 +51,12 @@
   --text-link-text-line-height: normal;
   --text-link-text-font-weight: 500;
   --text-link-text-font-style: normal;
-  --text-paragraphe-font-family: Montserrat-Regular, sans-serif;
+  --text-paragraphe-font-family: Montserrat, sans-serif;
   --text-paragraphe-font-size: 16px;
   --text-paragraphe-line-height: normal;
   --text-paragraphe-font-weight: 400;
   --text-paragraphe-font-style: normal;
-  --special-button-font-family: Inter-Regular, sans-serif;
+  --special-button-font-family: Inter, sans-serif;
   --special-button-font-size: 12px;
   --special-button-line-height: normal;
   --special-button-font-weight: 400;
