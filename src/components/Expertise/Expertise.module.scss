@@ -1,74 +1,92 @@
+.container,
+.container * {
+  box-sizing: border-box;
+}
 .container {
-    display: flex;
-    background-color: #f8f9fa;
-    border-radius: 15px;
-    overflow: hidden;
-    margin: 20px 0;
-    background: #eaedfc;
-    border-radius: 2.5rem;
-    border-style: solid;
-    border-color: #6979a7;
-    border-width: 0.0625rem;
-    padding: 5rem 3.75rem 5rem 3.75rem;
-    display: flex;
-    flex-direction: row;
-    gap: 5.375rem;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-
-  }
-  
-  .imageContainer {
-    flex: 1;
-  }
-  
-  .content {
-    flex: 2;
-    padding: 20px;
-  }
-  
-  .title {
-    color: #000000;
-    text-align: left;
-    font-family: "Aclonica", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    position: relative;
-  }
-  
-  .textExpertise {
-    color: #000000;
-    text-align: left;
-    font-family: var(
-      --heading-text-paragraphe-font-family,
-      "Montserrat",
-      sans-serif
-    );
-    font-size: var(--heading-text-paragraphe-font-size, 1rem);
-    font-weight: var(--heading-text-paragraphe-font-weight, 400);
-    position: relative;
-    align-self: stretch;
-  }
-  
-  .signature {
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .navigation {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .navButton {
-    background: none;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-    cursor: pointer;
-  }
+  background: #eaedfc;
+  border-radius: 2.5rem;
+  border-style: solid;
+  border-color: #6979a7;
+  border-width: 0.0625rem;
+  padding: 5rem 3.75rem 5rem 3.75rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5.375rem;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.expert {
+  border-radius: 2.96875rem;
+  border-width: 0.125rem;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  object-fit: cover;
+}
+.containerExpert {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 41.8125rem;
+  position: relative;
+}
+.expertTitleWords {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.expertTitle {
+  color: #000000;
+  text-align: left;
+  font-family: "Aclonica-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: relative;
+}
+.expertWords {
+  color: #000000;
+  text-align: left;
+  font-family: var(
+    --heading-text-paragraphe-font-family,
+    "Montserrat-Regular",
+    sans-serif
+  );
+  font-size: var(--heading-text-paragraphe-font-size, 1rem);
+  font-weight: var(--heading-text-paragraphe-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+}
+.identityExpertContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.identityExpert {
+  color: #000000;
+  text-align: left;
+  font-family: var(
+    --heading-text-paragraphe-font-family,
+    "Montserrat-Regular",
+    sans-serif
+  );
+  font-size: var(--heading-text-paragraphe-font-size, 1rem);
+  font-weight: var(--heading-text-paragraphe-font-weight, 400);
+  position: relative;
+  flex: 1;
+}
