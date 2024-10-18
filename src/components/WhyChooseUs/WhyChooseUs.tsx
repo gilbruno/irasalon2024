@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './WhyChooseUs.module.scss';
 
 const WhyChooseUs = () => {
@@ -11,7 +12,10 @@ const WhyChooseUs = () => {
       </p>
       <div className={styles.cardsContainer}>
         <div className={styles.card}>
-          <div className={styles.icon}>🖼️</div>
+          <div className={styles.imageContainer}>
+            <Image src="/img/whyChooseUs/whyChooseUs.jpg" alt="Why Choose Us" width={20} height={20} />
+          </div>
+
           <h3 className={styles.cardTitle}>Very Rare</h3>
           <p className={styles.cardText}>
             Forte de plus de 80 ans d'expérience d'années cumulées, notre équipe sélectionne moins de 100 œuvres d'artistes renommés.
@@ -24,7 +28,9 @@ const WhyChooseUs = () => {
           </p>
         </div>
         <div className={styles.card}>
-          <div className={styles.icon}>🖼️</div>
+          <div className={styles.imageContainer}>
+            <Image src="/img/whyChooseUs/whyChooseUs.jpg" alt="Why Choose Us" width={20} height={20} />
+          </div>
           <h3 className={styles.cardTitle}>Une Marketplace Unique</h3>
           <p className={styles.cardText}>
             Notre marketplace se distingue par sa singularité et son innovation, intégrant harmonieusement des œuvres physiques, des NFTs, et des droits d'auteur fractionnés.
@@ -37,7 +43,9 @@ const WhyChooseUs = () => {
           </p>
         </div>
         <div className={styles.card}>
-          <div className={styles.icon}>🖼️</div>
+          <div className={styles.imageContainer}>
+            <Image src="/img/whyChooseUs/whyChooseUs.jpg" alt="Why Choose Us" width={20} height={20} />
+          </div>
           <h3 className={styles.cardTitle}>Opportunité d'Investissement</h3>
           <p className={styles.cardText}>
             L'art n'est pas seulement une passion, c'est aussi une opportunité d'investissement. Notre plateforme vous permet de diversifier votre portefeuille en acquérant des œuvres physiques et numériques ainsi que des droits d'auteur.

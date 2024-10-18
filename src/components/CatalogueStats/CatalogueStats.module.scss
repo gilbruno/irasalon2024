@@ -1,15 +1,18 @@
 .container {
-    background-color: #f0f4ff;
     padding: 40px 20px;
     border-radius: 15px;
     margin: 20px 0;
   }
   
   .title {
-    font-size: 28px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
+    color: var(--primaire-black, #000035);
+    text-align: left;
+    font-family: "Unbounded", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+    padding-bottom: 30px;
   }
   
   .statsContainer {
@@ -20,23 +23,43 @@
   
   .statItem {
     flex-basis: calc(25% - 20px);
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1.25rem;
+    border-style: solid;
+    border-color: var(--primaire-black, #000035);
+    border-width: 0.0625rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 18.5625rem;
+    position: relative;
   }
   
   .statNumber {
-    font-size: 24px;
-    color: #0066cc;
-    margin-bottom: 10px;
+    color: var(--primaire-black, #000035);
+    text-align: left;
+    font-family: "Unbounded-Regular", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
   }
   
   .statDescription {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.4;
+    color: var(--primaire-black, #000035);
+    text-align: left;
+    font-family: var(
+      --heading-text-paragraphe-font-family,
+      "Montserrat-Regular",
+      sans-serif
+    );
+    font-size: var(--heading-text-paragraphe-font-size, 1rem);
+    font-weight: var(--heading-text-paragraphe-font-weight, 400);
+    position: relative;
+    align-self: stretch;
   }
   
   @media (max-width: 768px) {
