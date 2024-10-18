@@ -1,9 +1,14 @@
 .container {
-    background-color: #6b7cb4;
-    padding: 40px 20px;
-    border-radius: 15px;
-    color: white;
-    margin: 20px 0;
+  background: #6979a7;
+  border-radius: 2.5rem;
+  padding: 5rem 3.75rem 5rem 3.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
   }
   
   .title {
@@ -51,9 +56,17 @@
   }
   
   .cardText {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 10px;
+    color: #3f3d3d;
+    text-align: left;
+    font-family: var(
+      --heading-text-paragraphe-font-family,
+      "Montserrat",
+      sans-serif
+    );
+    font-size: var(--heading-text-paragraphe-font-size, 1rem);
+    font-weight: var(--heading-text-paragraphe-font-weight, 400);
+    position: relative;
+    align-self: stretch;
   }
   
   .imageContainer {
