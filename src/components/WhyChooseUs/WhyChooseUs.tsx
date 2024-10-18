@@ -6,10 +6,12 @@ const WhyChooseUs = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Pourquoi nous choisir ?</h2>
-      <p className={styles.subtitle}>
-        Explorez une collection unique de toiles physiques et de sculpture rare,
-        de leurs copies numériques (NFT), accompagnées de leurs droits d'auteur.
-      </p>
+      <div className={styles.subtitle}>
+          Explorez une collection unique de toiles physiques et de sculpture rare,
+        <br />
+        de leurs copies numériques (NFT), accompagnées de leurs droits
+        d&#039;auteur.
+      </div>
       <div className={styles.cardsContainer}>
         <div className={styles.card}>
           <div className={styles.imageContainer}>

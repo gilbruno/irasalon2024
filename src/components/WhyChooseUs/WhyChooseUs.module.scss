@@ -7,15 +7,26 @@
   }
   
   .title {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 10px;
+    color: var(--primaire-white, #f6f8ff);
+    text-align: left;
+    font-family: "Unbounded", sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: -0.03125rem;
+    font-weight: 400;
+    position: relative;
   }
   
   .subtitle {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 16px;
+    color: var(--color-5, #ffffff);
+    text-align: left;
+    font-family: var(
+      --heading-text-paragraphe-font-family,
+      "Montserrat",
+      sans-serif
+    );
+    font-size: var(--heading-text-paragraphe-font-size, 1rem);
+    font-weight: var(--heading-text-paragraphe-font-weight, 400);
+    position: relative;
   }
   
   .cardsContainer {
@@ -31,10 +42,6 @@
     padding: 20px;
     margin-bottom: 20px;
     color: #333;
-  }
-  
-  .icon {
-    
   }
   
   .cardTitle {
