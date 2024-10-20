@@ -12,25 +12,68 @@ const useCatalogueRequest = () => {
     const [email, setEmail]   = useState('')
     const [name, setName]     = useState('');
     const [phone, setPhone]   = useState('');
-    const [isEmailValid, setEmailValid]   = useState(true)
-    
 
     // Email validation function
-    const validateEmail = (email: string) => {
+    const validateEmail = () => {
+      console.log("validateEmail : ", email)
       const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return regex.test(String(email).toLowerCase());
+      const result = regex.test(String(email).toLowerCase())
+      console.log("result : ", result)
+      return result
     }
+
 
     const handleChangeEmail = (e: any) => setEmail(e.target.value)
     const handleChangeName = (e: any) => setName(e.target.value)
     const handleChangePhone = (e: any) => setPhone(e.target.value)
   
+    const isEmailValid = () => {
+      return validateEmail()
+    }
+
+    const isNameValid = () => {
+      return !!name
+    }
+
+    const checkEmail = async() => {
+      console.log("checkEmail")
+      if (!isEmailValid()) {
+        console.log("email invalid")
+        // Popup a succes toast if no errors.
+        toast({
+          title: "E-mail is not in the correct format",
+          description: '',
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        })
+      }  
+
+    }
+
+    const checkName = () => {
+      console.log("checkName : ", name)
+      if (!isNameValid()) {
+        // Popup a succes toast if no errors.
+        toast({
+          title: "Name is required",
+          description: '',
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        })
+      }  
+      else {
+        console.log('Valid name')
+      }
+    }
+
     //------------------------------------------------------------------------------ handlSendData
     const handlSendData = async () => {
-      console.log("handlSendData")
-      console.log("email ", email)
+      checkEmail()
+      checkName()
+      /*
       if (validateEmail(email)) {
-          setEmailValid(true)
           try {
             //Insert in Newsletter Table
             const msgError = await insertDataSalonAutomne2024(SALON_AUTOMNE_2024_TABLE, email, name, phone)
@@ -66,12 +109,13 @@ const useCatalogueRequest = () => {
             duration: 3000,
             isClosable: true,
           })
-          setEmailValid(false)
+          
       }
+          */
     }
     
 
-    return {email, setEmail, name, setName, phone, setPhone, isEmailValid, setEmailValid, validateEmail, handleChangeEmail, handleChangeName, handleChangePhone, handlSendData}
+    return {email, setEmail, name, setName, phone, setPhone, isEmailValid, validateEmail, handleChangeEmail, handleChangeName, handleChangePhone, handlSendData}
 }    
 
 export default useCatalogueRequest

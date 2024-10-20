@@ -2,10 +2,72 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './CatalogueRequest.module.scss';
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  FormErrorMessage,
+  Button,
+} from "@chakra-ui/react";
+
 import useCatalogueRequest from './useCatalogueRequest';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 
 const CatalogueRequest = () => {
-  const {email, setEmail, name, setName, phone, setPhone, isEmailValid, setEmailValid, validateEmail, handleChangeEmail, handleChangeName, handleChangePhone, handlSendData} = useCatalogueRequest()
+  const {email, setEmail, name, setName, phone, setPhone, isEmailValid, validateEmail, handleChangeEmail, handleChangeName, handleChangePhone, handlSendData} = useCatalogueRequest()
+
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
+  const [notificationCaptchaError, setNotificationCaptchaError] = useState<string>('');
+  const [notificationCaptchaSuccess, setNotificationCaptchaSuccess] = useState<string>('');
+
+  //---------------------------------------------------------------------
+  const submitEnquiryForm = async (gReCaptchaToken: string) => {
+    console.log('gReCaptchaToken', gReCaptchaToken)
+    try {
+      const response = await fetch("/api/captchaSubmit", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          gRecaptchaToken: gReCaptchaToken,
+        }),
+      });
+
+      const data = await response.json();
+      console.log(data)
+      if (data?.success === true) {
+        console.log(`Success with score: ${data?.score}`)
+        setNotificationCaptchaSuccess(`Human checking successful ! You can now provide your e-mail ...`);
+        
+      } else {
+        setNotificationCaptchaError(`Failure with score: ${data?.score}`);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setNotificationCaptchaError("Error submitting form. Please try again later.");
+    }
+  }
+
+
+  //---------------------------------------------------------------------
+  const handleSubmitCatchpaForm = async (e: any) => {
+      e.preventDefault();
+      if (!executeRecaptcha) {
+        console.log("Execute recaptcha not available yet");
+        setNotificationCaptchaError(
+          "Execute recaptcha not available yet likely meaning key not recaptcha key not set"
+        );
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
+        submitEnquiryForm(gReCaptchaToken);
+      });    
+    
+}
+
 
   return (
     <div className={styles.container}>
@@ -25,41 +87,36 @@ const CatalogueRequest = () => {
           de leurs copies numériques (NFT), accompagnées de leurs
           droits d'auteur.
         </p>
-          <div className={styles.inputGroup}>
-            <label htmlFor="name">Nom*</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={name}
-              onChange={handleChangeName}
-              placeholder="Entrer votre nom"
-              required
+        <FormControl color={'white'}>
+          <div className={styles.formLabel}>
+            <FormLabel color={'white'}>Nom *</FormLabel>
+            <Input type='email' color={'grey'} backgroundColor={'white'} 
+            placeholder='John Iloveart' 
+            focusBorderColor='white'
+            value={name}
+            onChange={handleChangeName} 
             />
           </div>
-          <div className={styles.inputGroup}>
-            <label htmlFor="email">Adresse mail*</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
+          <div className={styles.formLabel}>
+            <FormLabel color={'white'}>Email *</FormLabel>
+              <Input type='email' color={'grey'} backgroundColor={'white'} 
+              placeholder='e-mail' 
+              focusBorderColor='white'
               value={email}
-              onChange={handleChangeEmail}
-              placeholder="Adresse@gmail.com"
-              required
+              onChange={handleChangeEmail} 
+              />
+          </div>  
+          <div className={styles.formLabel}>
+            <FormLabel color={'white'}>Mobile</FormLabel>
+            <Input type='email' color={'grey'} backgroundColor={'white'} 
+            placeholder='+33696563254' 
+            focusBorderColor='white'
+            value={phone}
+            onChange={handleChangePhone} 
             />
-          </div>
-          <div className={styles.inputGroup}>
-            <label htmlFor="mobile">Mobile</label>
-            <input
-              type="tel"
-              id="mobile"
-              name="mobile"
-              value={phone}
-              onChange={handleChangePhone}
-              placeholder="Adresse@gmail.com"
-            />
-          </div>
+          </div>  
+        </FormControl>
+          
           {
             /*
             <div className={styles.checkboxGroup}>
