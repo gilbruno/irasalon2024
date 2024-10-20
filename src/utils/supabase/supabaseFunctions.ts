@@ -1,7 +1,7 @@
 import { CODE_UNIQUE_KEY_VIOLATION } from "./constants"
 import { supabase } from "./supabaseConnection"
 
-//------------------------------------------------------------------------------ insertEmail
+//------------------------------------------------------------------------------ insertDataSalonAutomne2024
 export const insertDataSalonAutomne2024 = async (table: string, email: string, resourcePath: string) => {
     let msgError = ''
     const { error } = await supabase

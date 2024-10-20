@@ -6,6 +6,7 @@ import '@fontsource/aclonica';
 import '@fontsource/inter';
 import '@fontsource/montserrat';
 import "./globals.css";
+import GoogleCaptchaWrapper from "./captcha/google-captcha-wrapper";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,9 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <GoogleCaptchaWrapper>
+        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          {children}
+        </body>
+      </GoogleCaptchaWrapper>
     </html>
   );
 }
