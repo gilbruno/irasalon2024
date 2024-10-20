@@ -76,7 +76,7 @@ const CatalogueRequest = () => {
             */
           }
           
-          <button className={styles.submitButton}>
+          <button className={styles.submitButton} onClick={handlSendData}>
             Recevoir le catalogue
           </button>
       </div>

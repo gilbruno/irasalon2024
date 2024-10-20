@@ -27,7 +27,8 @@ const useCatalogueRequest = () => {
   
     //------------------------------------------------------------------------------ handlSendData
     const handlSendData = async () => {
-      
+      console.log("handlSendData")
+      console.log("email ", email)
       if (validateEmail(email)) {
           setEmailValid(true)
           try {
@@ -57,6 +58,14 @@ const useCatalogueRequest = () => {
           }
 
       } else {
+          // Popup a succes toast if no errors.
+          toast({
+            title: "E-mail is not in the correct format",
+            description: '',
+            status: 'error',
+            duration: 3000,
+            isClosable: true,
+          })
           setEmailValid(false)
       }
     }
