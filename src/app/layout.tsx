@@ -7,7 +7,7 @@ import '@fontsource/inter';
 import '@fontsource/montserrat';
 import "./globals.css";
 import GoogleCaptchaWrapper from "./captcha/google-captcha-wrapper";
-import { ChakraProvider } from '@chakra-ui/react'
+import { Providers } from "./providers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,13 +32,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleCaptchaWrapper>
-        <ChakraProvider>
-          <body className={`${geistSans.variable} ${geistMono.variable}`}>
-            {children}
-          </body>
-        </ChakraProvider>  
-      </GoogleCaptchaWrapper>
+      
+        <GoogleCaptchaWrapper>
+            <body className={`${geistSans.variable} ${geistMono.variable}`}>
+              <Providers>
+              {children}
+              </Providers>  
+            </body>
+        </GoogleCaptchaWrapper>
+      
     </html>
   );
 }
