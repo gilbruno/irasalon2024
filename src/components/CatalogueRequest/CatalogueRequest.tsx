@@ -2,28 +2,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './CatalogueRequest.module.scss';
+import useCatalogueRequest from './useCatalogueRequest';
 
 const CatalogueRequest = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    mobile: '',
-    acceptPolicy: false
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Ici, vous pouvez ajouter la logique pour envoyer les données du formulaire
-  };
+  const {email, setEmail, name, setName, phone, setPhone, isEmailValid, setEmailValid, validateEmail, handleChangeEmail, handleChangeName, handleChangePhone, handlSendData} = useCatalogueRequest()
 
   return (
     <div className={styles.container}>
@@ -43,15 +25,14 @@ const CatalogueRequest = () => {
           de leurs copies numériques (NFT), accompagnées de leurs
           droits d'auteur.
         </p>
-        <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.inputGroup}>
             <label htmlFor="name">Nom*</label>
             <input
               type="text"
               id="name"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
+              value={name}
+              onChange={handleChangeName}
               placeholder="Entrer votre nom"
               required
             />
@@ -62,8 +43,8 @@ const CatalogueRequest = () => {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
+              value={email}
+              onChange={handleChangeEmail}
               placeholder="Adresse@gmail.com"
               required
             />
@@ -74,26 +55,30 @@ const CatalogueRequest = () => {
               type="tel"
               id="mobile"
               name="mobile"
-              value={formData.mobile}
-              onChange={handleChange}
+              value={phone}
+              onChange={handleChangePhone}
               placeholder="Adresse@gmail.com"
             />
           </div>
-          <div className={styles.checkboxGroup}>
-            <input
-              type="checkbox"
-              id="acceptPolicy"
-              name="acceptPolicy"
-              checked={formData.acceptPolicy}
-              onChange={handleChange}
-              required
-            />
-            <label htmlFor="acceptPolicy">Vous acceptez notre politique de confidentialité</label>
-          </div>
-          <button type="submit" className={styles.submitButton}>
+          {
+            /*
+            <div className={styles.checkboxGroup}>
+                <input
+                  type="checkbox"
+                  id="acceptPolicy"
+                  name="acceptPolicy"
+                  checked={formData.acceptPolicy}
+                  onChange={handleChange}
+                  required
+                />
+                <label htmlFor="acceptPolicy">Vous acceptez notre politique de confidentialité</label>
+              </div>
+            */
+          }
+          
+          <button className={styles.submitButton}>
             Recevoir le catalogue
           </button>
-        </form>
       </div>
     </div>
   );
