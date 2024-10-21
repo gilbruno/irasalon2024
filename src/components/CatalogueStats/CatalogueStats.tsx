@@ -8,27 +8,56 @@ const CatalogueStats = () => {
       <div className={styles.statsContainer}>
         <div className={styles.statItem}>
           <div className={styles.statNumber}>10 +</div>
-          <p className={styles.statDescription}>
-            C'est le nombre d'artistes qui ont été sélectionnés pour rejoindre l'aventure IRA en mettant à disposition des œuvres uniques et rares.
-          </p>
+          <div className={styles.statDescription}>
+            <span className={styles.normalText}>C'est le </span>
+            <span className={styles.boldText}> nombre d'artistes </span>
+            <span className={styles.normalText}>qui ont été </span>
+            <span className={styles.boldText}> sélectionnés  </span>
+            <span className={styles.normalText}>pour rejoindre l'aventure IRA en mettant à disposition des </span>
+            <span className={styles.boldText}>œuvres uniques </span>
+            <span className={styles.normalText}>et</span>
+            <span className={styles.boldText}> rares</span>
+          </div>
         </div>
         <div className={styles.statItem}>
           <div className={styles.statNumber}>&lt; 100</div>
-          <p className={styles.statDescription}>
-            C'est le nombre d'œuvres que nous avons choisies pour votre collection, que vous soyez un novice, un collectionneur ou un expert.
-          </p>
+          <div className={styles.statDescription}>
+            <span className={styles.normalText}>C'est le </span>
+            <span className={styles.boldText}> nombre d'œuvres</span>
+            <span className={styles.normalText}>que nous avons choisies pour</span>
+            <span className={styles.boldText}> votre collection</span>
+            <span className={styles.normalText}>, que vous soyez un</span>
+            <span className={styles.boldText}>novice, collectionneur ou expert </span>
+          </div>
         </div>
         <div className={styles.statItem}>
           <div className={styles.statNumber}>5000 +</div>
-          <p className={styles.statDescription}>
-            C'est le nombre de testeurs internationaux qui se sont inscrits pour évaluer et tester de notre marketplace innovante.
-          </p>
+          <div className={styles.statDescription}>
+            <span className={styles.normalText}>C'est le</span>
+            <span className={styles.boldText}> nombre de testeurs internationaux </span>
+            <span className={styles.normalText}>qui se sont inscrits pour </span>
+            <span className={styles.boldText}> évaluer et tester </span>
+            <span className={styles.normalText}>notre </span>
+            <span className={styles.boldText}>marketplace innovante </span>
+            <br></br><br></br>
+            
+          </div>
         </div>
         <div className={styles.statItem}>
-          <div className={styles.statNumber}>70 %</div>
-          <p className={styles.statDescription}>
-            C'est la part d'artistes ayant une cote dans le top 60 I-CAC selon leurs indices respectifs. Deux artistes figurent dans le top 10.
-          </p>
+          <div className={styles.statNumberBig}>70 %</div>
+          <div className={styles.statDescription}>
+            <span className={styles.normalText}>C'est la</span>
+            <span className={styles.boldText}> part d'artistes </span>
+            <span className={styles.normalText}>ayant</span>
+            <span className={styles.boldText}> une cote</span>
+            <span className={styles.normalText}>dans le  </span>
+            <span className={styles.boldText}>top 60 I-CAC </span>
+            <span className={styles.normalText}>selon leurs </span>
+            <span className={styles.boldText}>indices respectifs. Deux artistes </span>
+            <span className={styles.normalText}>figurent dans le </span>
+            <span className={styles.boldText}>top 10</span>
+             
+          </div>
         </div>
       </div>
     </div>

@@ -26,8 +26,6 @@
   flex: 1 1 calc(25% - 15px);
   min-width: 200px; // Définit une largeur minimale
   max-width: calc(25% - 15px);
-
-  
   border-radius: 1.25rem;
   border-style: solid;
   border-color: var(--primaire-black, #000035);
@@ -46,11 +44,36 @@
 
 .statNumber {
   color: var(--primaire-black, #000035);
-  text-align: center;
+  text-align: left;
   font-family: "Unbounded", sans-serif;
-  font-size: 2.5rem; // Taille de police réduite
+  font-size: 2.5rem; 
   font-weight: 400;
   position: relative;
+  align-self: flex-start;
+}
+
+.statNumberBig {
+  color: var(--primaire-black, #000035);
+  text-align: left;
+  font-family: "Unbounded", sans-serif;
+  font-size: 3rem; 
+  font-weight: 400;
+  position: relative;
+  align-self: flex-start;
+}
+
+.normalText {
+  color: var(--primaire-black, #000035);
+  font-family: var(--heading-text-paragraphe-font-family);
+  font-size: var(--heading-text-paragraphe-font-size);
+  font-weight: var(--heading-text-paragraphe-font-weight);
+}
+
+.statDescription .boldText {
+  color: var(--primaire-black, #000035);
+  font-family: var(--catalogue-stats-bold-text-font-family);
+  font-size: var(--catalogue-stats-bold-text-font-size);
+  font-weight: var(--catalogue-stats-bold-text-font-weight);
 }
 
 .statDescription {
