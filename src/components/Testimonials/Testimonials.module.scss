@@ -133,12 +133,12 @@
   color: #000000;
   font-family: var(
     --heading-text-paragraphe-font-family,
-    "Montserrat-Italic",
+    "Montserrat",
     sans-serif
   );
   font-size: var(--heading-text-paragraphe-font-size, 16px);
   font-weight: var(--heading-text-paragraphe-font-weight, 400);
-  font-style: var(--heading-text-paragraphe-font-style, italic);
+  font-style: var(--heading-text-paragraphe-font-style-italic);
 }
 .artistText12 {
   color: #000000;
@@ -240,7 +240,7 @@
   font-family: var(--heading-text-paragraphe-font-family, "Montserrat", sans-serif);
   font-size: var(--heading-text-paragraphe-font-size, 16px);
   font-weight: var(--heading-text-paragraphe-font-weight, 400);
-  font-style: var(--heading-text-paragraphe-font-style, italic);
+  font-style: var(--heading-text-paragraphe-font-style-italic);
 }
 .artistText22 {
   color: #000000;

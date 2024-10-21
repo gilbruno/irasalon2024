@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './WhyChooseUs.module.scss';
+import { CircleDollarSign, Gem, ThumbsUp } from 'lucide-react';
 
 const WhyChooseUs = () => {
   return (
@@ -15,7 +16,7 @@ const WhyChooseUs = () => {
       <div className={styles.cardsContainer}>
         <div className={styles.card}>
           <div className={styles.imageContainer}>
-            <Image src="/img/whyChooseUs/whyChooseUs.jpg" alt="Why Choose Us" width={18} height={18} />
+            <Gem size={20} color="#3C4ED7" />
           </div>
 
           <div className={styles.cardTitle}>Very Rare</div>
@@ -35,7 +36,7 @@ const WhyChooseUs = () => {
         </div>
         <div className={styles.card}>
           <div className={styles.imageContainer}>
-            <Image src="/img/whyChooseUs/whyChooseUs.jpg" alt="Why Choose Us" width={18} height={18} />
+            <ThumbsUp size={20} color="#3C4ED7" />
           </div>
           <div className={styles.cardTitle}>Une Marketplace Unique</div>
 
@@ -57,7 +58,7 @@ const WhyChooseUs = () => {
         </div>
         <div className={styles.card}>
           <div className={styles.imageContainer}>
-            <Image src="/img/whyChooseUs/whyChooseUs.jpg" alt="Why Choose Us" width={18} height={18} />
+            <CircleDollarSign size={20} color="#3C4ED7" />
           </div>
           <div className={styles.cardTitle}>Opportunité d'Investissement</div>
           <div className={styles.cardText}>
