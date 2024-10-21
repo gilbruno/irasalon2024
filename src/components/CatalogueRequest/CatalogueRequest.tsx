@@ -11,63 +11,9 @@ import {
 } from "@chakra-ui/react";
 
 import useCatalogueRequest from './useCatalogueRequest';
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 
 const CatalogueRequest = () => {
-  const {email, setEmail, name, setName, phone, setPhone, isEmailValid, validateEmail, handleChangeEmail, handleChangeName, handleChangePhone, handlSendData} = useCatalogueRequest()
-
-  const { executeRecaptcha } = useGoogleReCaptcha();
-
-  const [notificationCaptchaError, setNotificationCaptchaError] = useState<string>('');
-  const [notificationCaptchaSuccess, setNotificationCaptchaSuccess] = useState<string>('');
-
-  //---------------------------------------------------------------------
-  const submitEnquiryForm = async (gReCaptchaToken: string) => {
-    console.log('gReCaptchaToken', gReCaptchaToken)
-    try {
-      const response = await fetch("/api/captchaSubmit", {
-        method: "POST",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          gRecaptchaToken: gReCaptchaToken,
-        }),
-      });
-
-      const data = await response.json();
-      console.log(data)
-      if (data?.success === true) {
-        console.log(`Success with score: ${data?.score}`)
-        setNotificationCaptchaSuccess(`Human checking successful ! You can now provide your e-mail ...`);
-        
-      } else {
-        setNotificationCaptchaError(`Failure with score: ${data?.score}`);
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setNotificationCaptchaError("Error submitting form. Please try again later.");
-    }
-  }
-
-
-  //---------------------------------------------------------------------
-  const handleSubmitCatchpaForm = async (e: any) => {
-      e.preventDefault();
-      if (!executeRecaptcha) {
-        console.log("Execute recaptcha not available yet");
-        setNotificationCaptchaError(
-          "Execute recaptcha not available yet likely meaning key not recaptcha key not set"
-        );
-        return;
-      }
-      executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
-        submitEnquiryForm(gReCaptchaToken);
-      });    
-    
-}
-
+  const {email, setEmail, name, setName, phone, setPhone, isEmailValid, validateEmail, handleChangeEmail, handleChangeName, handleChangePhone, handleSubmitCatchpaForm} = useCatalogueRequest()
 
   return (
     <div className={styles.container}>
@@ -133,7 +79,7 @@ const CatalogueRequest = () => {
             */
           }
           
-          <button className={styles.submitButton} onClick={handlSendData}>
+          <button className={styles.submitButton} onClick={handleSubmitCatchpaForm}>
             Recevoir le catalogue
           </button>
       </div>
